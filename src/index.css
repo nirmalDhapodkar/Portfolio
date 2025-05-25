@@ -7,5 +7,10 @@
 }
 
 body{
-    background-color: var(--light-bg);
+    background-color: var(--dark-bg);
+}
+
+/* Hide scrollbar globally */
+::-webkit-scrollbar {
+    display: none;
 }

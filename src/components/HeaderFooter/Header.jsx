@@ -1,8 +1,14 @@
 import { useState } from 'react';
 import './HeaderFooter.css';
+import SwitchDark from '../Utils/SwitchDark.jsx';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const handleThemeToggle = (isDark) => {
+    console.log('Theme switched to:', isDark ? 'Dark' : 'Light');
+    // Optional: apply theme globally here if needed
+  };
 
   return (
     <header className="fixed z-50 h-15 w-full shadow-lg shadow-[#09412b]">
@@ -10,7 +16,7 @@ const Header = () => {
         <h1 className="text-[#00E188] font-extrabold text-xl md:text-3xl">Portfolio</h1>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:block text-white">
+        <nav className="hidden md:flex items-center gap-6 text-white">
           <ul className="flex space-x-6 text-lg font-medium">
             {['Home', 'About', 'Contact'].map((item) => (
               <li key={item}>
@@ -23,15 +29,22 @@ const Header = () => {
               </li>
             ))}
           </ul>
+
+          {/* SwitchDark Button for desktop */}
+          <SwitchDark className='md:hidden' onToggle={handleThemeToggle} />
         </nav>
 
         {/* Hamburger Icon - Mobile Only */}
-        <button
-          className="md:hidden text-white text-3xl focus:outline-none"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-        >
-          {isMenuOpen ? '✖' : '☰'}
-        </button>
+        <div className="md:hidden flex items-center gap-4">
+          <SwitchDark onToggle={handleThemeToggle} />
+          <button
+            className="text-white text-3xl focus:outline-none"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            {isMenuOpen ? '✖' : '☰'}
+          </button>
+        </div>
+
       </div>
 
       {/* Mobile Fullscreen Menu Overlay */}

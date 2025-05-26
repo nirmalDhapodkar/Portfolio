@@ -18,4 +18,4 @@ This is the screenshot of home page on 'Second' commit which is being uploaded t
 
 ## This is the Demo
 
-![Demo](screenshots/demo.webm)
+▶️ [Watch Demo Video](public/demo.webm)

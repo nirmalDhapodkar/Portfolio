@@ -15,7 +15,7 @@ If you are developing a production application, we recommend using TypeScript wi
 ## Home Page
 ![Homepage Screenshot](screenshots/home1.png)
 
-##Home Page Mobile
+## Home Page Mobile
 ![Homepage Screenshot](screenshots/mob1.png)
 ![Homepage Screenshot](screenshots/mob2.png)
 

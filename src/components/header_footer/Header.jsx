@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './HeaderFooter.css';
-import SwitchDark from '../Utils/SwitchDark.jsx';
+import SocialTabs from '../utils/SocialTabs.jsx';
+import SwitchDark from '../utils/SwitchDark.jsx';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -49,7 +50,8 @@ const Header = () => {
 
       {/* Mobile Fullscreen Menu Overlay */}
       {isMenuOpen && (
-        <div className="md:hidden fixed left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] w-[95vw] h-[80vh] rounded-xl bg-[#344b3d]/60 backdrop-blur-[6px] outline-2 outline-gray-400/80 flex flex-col items-center justify-center space-y-8 text-white text-2xl font-semibold z-40">
+        <div className="md:hidden fixed left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] w-[95vw] h-[80vh] rounded-xl bg-[#344b3d]/60 backdrop-blur-[6px] outline-2 outline-gray-400/80 text-white text-2xl font-semibold z-40">
+          <div className='h-[85%] flex flex-col items-center justify-center space-y-8 '>
           {['Home', 'About', 'Contact'].map((item) => (
             <a
               key={item}
@@ -60,6 +62,12 @@ const Header = () => {
               {item}
             </a>
           ))}
+          </div>
+          <div className="md:hidden relative bottom-0 flex justify-center w-full">
+            <div className="flex gap-6">
+              <SocialTabs />
+            </div>
+          </div>
         </div>
       )}
     </header>

@@ -1,6 +1,6 @@
-import Header  from './components/HeaderFooter/Header'
-import DummySection from './components/Home/DummySection'
-import Hero from './components/Home/Hero'
+import Header  from './components/header_footer/Header'
+import DummySection from './components/home/DummySection'
+import Hero from './components/home/Hero'
 
 function App() {
 

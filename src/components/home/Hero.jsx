@@ -14,7 +14,7 @@ const Hero = () => {
 
     return (
         <section
-            className="box-contains h-auto md:h-[100vh] w-full md:gap-12 gap-y-8 py-12 md:py-12 px-3 md:px-8"
+            className="box-contains h-auto md:h-[105vh] w-full md:gap-12 gap-y-8 py-12 md:py-12 px-3 md:px-8"
             style={{
                 backgroundImage: `url(${image})`,
                 backgroundSize: 'cover',
